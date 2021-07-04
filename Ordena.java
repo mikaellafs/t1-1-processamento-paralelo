@@ -7,6 +7,8 @@ public class Ordena implements Runnable{
 
     public Ordena(int[] vetor, int inicio, int fim){
         this.vetorNum = vetor;
+        this.inicio = inicio;
+        this.fim = fim;
     }
 
     @Override
