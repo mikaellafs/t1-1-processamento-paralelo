@@ -6,6 +6,7 @@ public class Ordena implements Runnable{
     int fim;
 
     public Ordena(int[] vetor, int inicio, int fim){
+        //System.out.println("inicio: " + inicio + " fim: " + fim);
         this.vetorNum = vetor;
         this.inicio = inicio;
         this.fim = fim;

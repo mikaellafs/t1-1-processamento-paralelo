@@ -22,7 +22,7 @@ public class Main{
                 // (j * fracao) e' o percentil que indica onde essa thread deve comecar
                 int inicio = (int) Math.round(Math.floor(j * fracao * TAMANHO_VETOR));
                 // ((j + 1) * fracao) e' o percentil que indica onde essa thread deve terminar
-                int fim = (int) Math.round(Math.ceil((j + 1) * fracao * TAMANHO_VETOR - 1));
+                int fim = (int) (inicio + fracao * TAMANHO_VETOR);
                 Ordena ordena = new Ordena(vetor, inicio, fim);
                 Thread thread = new Thread(ordena);
                 threads.add(thread);
@@ -37,6 +37,6 @@ public class Main{
             }
             threads.clear();
         }
-//        System.out.println(Arrays.toString(vetor));
+        System.out.println(Arrays.toString(vetor));
     }
 }
