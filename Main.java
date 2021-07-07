@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main{
     public static void main(String[] args){
-        final int TAMANHO_VETOR = 50_000_000;
+        final int TAMANHO_VETOR = 1000;
         int[] vetorReferencia = new int[TAMANHO_VETOR];
         // Gera valores aleatorios
         for(int i = 0; i < vetorReferencia.length; i++) {
@@ -17,7 +17,7 @@ public class Main{
         ArrayList<Thread> threads = new ArrayList<>();
         // Executa k threads por vez
         for(int numThreadsInicial : k) {
-            int[] vetor = vetorReferencia;
+            int[] vetor = vetorReferencia.clone();
             double numThreads = numThreadsInicial;
             System.out.println("k inicial : " + numThreadsInicial + " {");
             while(numThreads >= 1) {
